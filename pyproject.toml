@@ -8,6 +8,7 @@ authors = ["Yehonatan Elentok <elyoni@gmail.com>"]
 python = "^3.8"
 pandas = "^1.4.0"
 loguru = "^0.6.0"
+openpyxl = "^3.0.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
