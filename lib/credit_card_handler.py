@@ -4,6 +4,9 @@ import pandas as pd
 from datetime import datetime
 
 class CreditCardMaxXlsxParser():
+    ROW_START=3
+    COLUMES_USE="A:B,F"
+    COLUMES_INDEX=[0,2]
     @staticmethod
     def xlsx(file_path: pathlib.Path) -> pd.DataFrame:
         xls = pd.ExcelFile(file_path)
@@ -16,9 +19,9 @@ class CreditCardMaxXlsxParser():
                         df,
                         pd.read_excel(xls,
                             sheet_name=sheet_name,
-                            header=3,
-                            usecols="A:B,F",
-                            index_col=[0,2],
+                            header=CreditCardMaxXlsxParser.ROW_START,
+                            usecols=CreditCardMaxXlsxParser.COLUMES_USE,
+                            index_col=CreditCardMaxXlsxParser.COLUMES_INDEX,
                             names=["Date",
                                 "Description",
                                 "Amount",
