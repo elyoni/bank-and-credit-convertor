@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import pandas as pd
-from lib.dataframe_convertor import DataConvertor
+from src.dataframe_convertor import DataConvertor
 def test_dataconvertor_append():
     df_reference = pd.DataFrame(
             index=["day01", "day02", "day03", "day04"],

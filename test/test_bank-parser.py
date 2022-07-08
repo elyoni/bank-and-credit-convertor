@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import pandas as pd
-from lib.bank_handler import BankLeumiXlsxParser
+from src.bank_handler import BankLeumiXlsxParser
 def test_credit_card_parser():
     df = BankLeumiXlsxParser.xlsx("test/leumi_bank_test.xlsx")
 
