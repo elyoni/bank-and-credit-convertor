@@ -10,3 +10,20 @@ This file is the database of the system
 .. TODO: Need to add a second column to indicate if the row has been replaced 
 . First the user need to provide the bank sheet and then the credit card
 . If the user will provide firstThe program will replace credit card cost
+
+== How to run the tests
+=== Run all the tests
+[source,bash]
+----
+poetry run python -m pytest
+----
+=== Run a single the tests
+[source,bash]
+----
+poetry run python -m pytest test/test_database.py
+----
+=== Run a single the tests with the prints
+[source,bash]
+----
+poetry run python -m pytest test/test_database.py -s
+----
