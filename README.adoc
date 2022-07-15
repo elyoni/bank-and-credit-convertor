@@ -3,6 +3,22 @@ Convert bank and credit card information into a single place with easy UI
 
 == db.xlsx
 This file is the database of the system
+=== Database Structure
+[cols="1,1,1,1,1,1"]
+.Main Sheet
+|===
+|Date|Description|Group|SubGroup|Amount|Total
+|01/07/20|work01|Salary|My Salary|1000|2000
+|01/07/20|work02|Salary|Other Salary|1000|3000
+|02/07/20|credit card|credit card|-|-200|2800
+|04/07/20|something|eat out side||-1200|1600
+|05/07/20|something|eat out side||-500|1100
+|07/07/20|Paz|Car|Fuel|-200|900
+|===
+.Total Sheet
+|===
+|Bank History|1000
+|===
 
 == Working flow
 . The user need to give the oldest total money he has. The value will be saved in db.xlsx under separate sheet
