@@ -5,16 +5,26 @@ import pandas as pd
 class Database():
     '''Handle the database'''
     def __init__(self):
-        self.database_path = "db.xlsx"
-        self.db = {}
+        self.database_path = "tmp.xlsx"
+        self.main_db = None
+        self.bank_history = None
+
+    def read_main_db(self):
+        # TODO: Add verification if 'Main' sheet exists
+        self.main_db = pd.read_excel(self.database_path, sheet_name="Main")
+        print(self.main_db)
+
+    def read_bank_history(self):
+            #  for sheet_name in xls.sheet_names:
+        # TODO: Add verification if 'Total' sheet exists
+        bank_history_sheet = pd.read_excel(self.database_path, sheet_name="Total", nrows=2)
+        self.bank_history = bank_history_sheet["Bank History"].iat[0]
 
     def read(self):
-        '''Because there are multiple sheet, I need to for loop on every sheet'''
+        '''I am reading only the first two sheets, the Main and Total'''
         try:
-            xls = pd.ExcelFile(self.database_path)
-            df = pd.DataFrame([])
-            for sheet_name in xls.sheet_names:
-                self.db["sheet_name"] = pd.read_excel(self.database_path, sheet_name=sheet_name)
+            self.read_main_db()
+            self.read_bank_history()
         except FileNotFoundError:
             print(f"The file {self.database_path} wasn't found, create new")
             try:
