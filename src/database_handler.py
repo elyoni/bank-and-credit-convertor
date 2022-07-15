@@ -24,4 +24,4 @@ class Database():
             except Exception:
                 raise
 
-    def __str__(self):
+    #  def __str__(self):
