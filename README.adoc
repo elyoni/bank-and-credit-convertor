@@ -3,29 +3,39 @@ Convert bank and credit card information into a single place with easy UI
 
 == db.xlsx
 This file is the database of the system
+
 === Database Structure
-[cols="1,1,1,1,1,1"]
 .Main Sheet
 |===
-|Date|Description|Group|SubGroup|Amount|Total
-|01/07/20|work01|Salary|My Salary|1000|2000
-|01/07/20|work02|Salary|Other Salary|1000|3000
-|02/07/20|credit card|credit card|-|-200|2800
-|04/07/20|something|eat out side||-1200|1600
-|05/07/20|something|eat out side||-500|1100
-|07/07/20|Paz|Car|Fuel|-200|900
+|Date       |Description|Group          |SubGroup       |Amount |Total  |C.Card Number|C.Card Original Date|C.Card Replace Status|C.Card Replace Leftover
+|03/06/20   |something  |eat out side   |               |-500   |500    |8888         |02/07/20            |                     |
+|04/06/20   |something  |eat out side   |               |-1000  |-500   |9999         |02/07/20            |                     |
+|05/06/20   |something  |eat out side   |               |-500   |-1000  |9999         |02/07/20            |                     |
+
+|01/07/20   |work01     |Salary         |My Salary      |1000   |0      |             |                    |                     |
+|01/07/20   |work02     |Salary         |Other Salary   |1000   |1000   |             |                    |                     |
+                                                                                                           
+|02/07/20   |credit card|Credit Card    |9999           |-1500  |1000   |             |                    |Fully                |
+|02/07/20   |credit card|Credit Card    |8888           |-600   |400    |             |                    |Partial              |-100 
+|04/07/20   |something  |eat out side   |               |-1200  |-800   |             |                    |                     |
+|05/07/20   |something  |eat out side   |               |-500   |-1300  |             |                    |                     |
+|07/07/20   |Paz        |Car            |Fuel           |-200   |-1500  |             |                    |                     |
 |===
-.Total Sheet
+
+.BankHistory Sheet
 |===
-|Bank History|1000
+|Date|01/05/20
+|Amount|1000
 |===
 
 == Working flow
 . The user need to give the oldest total money he has. The value will be saved in db.xlsx under separate sheet
 . Credit card replacement
+.. When the user insert credit card was replace on the 'Main' sheet we need to write yes under the 'Don't Count' column
 .. TODO: Need to add a second column to indicate if the row has been replaced 
 . First the user need to provide the bank sheet and then the credit card
 . If the user will provide firstThe program will replace credit card cost
+
 
 == How to run the tests
 === Run all the tests
