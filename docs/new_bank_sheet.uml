@@ -1,0 +1,8 @@
+@startuml
+:User insert new bank data sheet;
+:Get the oldest line in the data sheet;
+:Get bank history infomation from BankHistory sheet;
+if (oldest date on new data < BankHistory ) then
+    :Replace value + date on BankHistory sheet;
+endif
+@enduml

@@ -7,19 +7,19 @@ This file is the database of the system
 === Database Structure
 .Main Sheet
 |===
-|Date       |Description|Group          |SubGroup       |Amount |Total  |C.Card Number|C.Card Original Date|C.Card Replace Status|C.Card Replace Leftover
-|03/06/20   |something  |eat out side   |               |-500   |500    |8888         |02/07/20            |                     |
-|04/06/20   |something  |eat out side   |               |-1000  |-500   |9999         |02/07/20            |                     |
-|05/06/20   |something  |eat out side   |               |-500   |-1000  |9999         |02/07/20            |                     |
+|Date       |Description|Group          |SubGroup       |Amount |C.Card Number|C.Card Original Date|C.Card Replace Status|C.Card Replace Leftover
+|03/06/20   |something  |eat out side   |               |-500   |8888         |02/07/20            |                     |
+|04/06/20   |something  |eat out side   |               |-1000  |9999         |02/07/20            |                     |
+|05/06/20   |something  |eat out side   |               |-500   |9999         |02/07/20            |                     |
 
-|01/07/20   |work01     |Salary         |My Salary      |1000   |0      |             |                    |                     |
-|01/07/20   |work02     |Salary         |Other Salary   |1000   |1000   |             |                    |                     |
-                                                                                                           
-|02/07/20   |credit card|Credit Card    |9999           |-1500  |1000   |             |                    |Fully                |
-|02/07/20   |credit card|Credit Card    |8888           |-600   |400    |             |                    |Partial              |-100 
-|04/07/20   |something  |eat out side   |               |-1200  |-800   |             |                    |                     |
-|05/07/20   |something  |eat out side   |               |-500   |-1300  |             |                    |                     |
-|07/07/20   |Paz        |Car            |Fuel           |-200   |-1500  |             |                    |                     |
+|01/07/20   |work01     |Salary         |My Salary      |1000   |             |                    |                     |
+|01/07/20   |work02     |Salary         |Other Salary   |1000   |             |                    |                     |
+                                                                                                   
+|02/07/20   |credit card|Credit Card    |9999           |-1500  |             |                    |Fully                |0
+|02/07/20   |credit card|Credit Card    |8888           |-600   |             |                    |Partial              |-100 
+|04/07/20   |something  |eat out side   |               |-1200  |             |                    |                     |
+|05/07/20   |something  |eat out side   |               |-500   |             |                    |                     |
+|07/07/20   |Paz        |Car            |Fuel           |-200   |             |                    |                     |
 |===
 
 .BankHistory Sheet

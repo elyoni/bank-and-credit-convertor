@@ -5,7 +5,7 @@ import pandas as pd
 class Database():
     '''Handle the database'''
     def __init__(self):
-        self.database_path = "tmp.xlsx"
+        self.database_path = "db.xlsx"
         self.main_db = None
         self.bank_history = None
 
@@ -17,11 +17,20 @@ class Database():
     def read_bank_history(self):
             #  for sheet_name in xls.sheet_names:
         # TODO: Add verification if 'Total' sheet exists
-        bank_history_sheet = pd.read_excel(self.database_path, sheet_name="Total", nrows=2)
-        self.bank_history = bank_history_sheet["Bank History"].iat[0]
+        bank_history_sheet = pd.read_excel(self.database_path, sheet_name="BankHistory", index_col=0)
+        print("\n", bank_history_sheet.index)
+        #  print("Amount", bank_history_sheet["Amount"].iat[0])
+        #  self.bank_history = bank_history_sheet["Date"].iat[0]
+
+    def add_new_bank_data(self, bank_data):
+        pass
+
+    def add_new_creditcard_data(self, bank_data):
+        pass
 
     def read(self):
         '''I am reading only the first two sheets, the Main and Total'''
+        # TODO: Add verification if the database file exists if not create new one
         try:
             self.read_main_db()
             self.read_bank_history()
