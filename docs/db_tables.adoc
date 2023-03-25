@@ -1,0 +1,35 @@
+.Bank Table
+[%header]
+|===
+| Date | Amount | Description | Group | SubGroup
+| 1.1.2023 | 120 | Arnona | House | Arnona
+| 2.2.2023 | 100 | Credit Card | Credit Card | <Credit Card Number>
+| 4.1.2023 | 220 | Rent | House | Rent
+| 5.1.2023 | 150 | Electricity | House | Electricity
+|===
+
+.Credit Card Table (General) - Every Credit Card Has a table
+[%header]
+|===
+| Date | Payment Date | Amount | Description | Group | SubGroup
+| 1.1.2023 | 2.2.2023 | 20 | Something | GoingOut | Beer
+| 5.1.2023 | 2.2.2023 | 20 | Something | GoingOut | Beer
+| 6.1.2023 | 2.2.2023 | 20 | Something | GoingOut | Beer
+| 7.1.2023 | 2.2.2023 | 20 | Something | GoingOut | Beer
+| 12.1.2023 | 2.2.2023 | 20 | Something | GoingOut | Beer
+|===
+
+.Summery Table - The output after aggregation
+[%header]
+|===
+| Date     | Amount   | Description | Group     | SubGroup  | Total
+| 1.1.2023 |  20      | Something   | GoingOut | Beer       | 10000
+| 1.1.2023 | 120      | Arnona      | House     | Arnona   | 9880
+| 4.1.2023 | 220      | Rent        | House | Rent | 9660
+| 5.1.2023 |  20      | Something   | GoingOut | Beer | 9640
+| 5.1.2023 | 150      | Electricity | House | Electricity | 9490
+| 6.1.2023 |  20      | Something   | GoingOut | Beer | 9470
+| 7.1.2023 |  20      | Something   | GoingOut | Beer | 9450
+| 12.1.2023 |  20     | Something   | GoingOut | Beer | 9430
+// | 2.2.2023 | 100 | Credit Card | Credit Card | <Credit Card Number>
+|===
